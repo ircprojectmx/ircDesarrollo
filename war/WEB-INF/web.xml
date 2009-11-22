@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>IRC.html</welcome-file>
+  </welcome-file-list>
+
+<!-- Servlets -->
+	<servlet>
+		<servlet-name>InitPropServlet</servlet-name>
+		<servlet-class>
+			mx.gob.salud.irc.server.utils.InitProperties
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitPropServlet</servlet-name>
+		<url-pattern>/InitPropServlet</url-pattern>
+	</servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>CommonRequest</servlet-name>
+  	<servlet-class>mx.gob.salud.irc.server.services.CommonRequestImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CommonRequest</servlet-name>
+  	<url-pattern>/irc/CommonRequest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>Security</servlet-name>
+  	<servlet-class>mx.gob.salud.irc.server.services.SecurityImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Security</servlet-name>
+  	<url-pattern>/irc/Security</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>Form</servlet-name>
+  	<servlet-class>mx.gob.salud.irc.server.services.FormImpl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Form</servlet-name>
+  	<url-pattern>/irc/Form</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+      <servlet-name>remoteLoggerServiceImpl</servlet-name>
+      <servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>remoteLoggerServiceImpl</servlet-name>
+      <url-pattern>/irc/gwt-log</url-pattern>
+    </servlet-mapping>
+</web-app>

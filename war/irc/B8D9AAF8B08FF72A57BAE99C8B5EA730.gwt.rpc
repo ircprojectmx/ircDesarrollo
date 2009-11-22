@@ -1,0 +1,9 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true
+java.lang.Exception, false
+java.lang.RuntimeException, false
+java.lang.String, true
+java.lang.Throwable, false
+java.util.ArrayList, true
+java.util.HashMap, true
+java.util.LinkedHashMap, true
+mx.gob.salud.irc.client.utils.db.TableDefinition, true
